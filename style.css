@@ -1,0 +1,76 @@
+/* Layout */
+body {
+	background-image: url(assets/unnamed.jpg);
+	background-repeat: no-repeat;
+	
+	background-position: center;
+	background-size: cover;
+}
+.main {
+	display: flex;
+	padding: 2em;
+	height: 90vh;
+	justify-content: center;
+	align-items: middle;
+	position: relative;
+}
+
+.clockbox,
+#clock {
+	width: 47%;
+	position: absolute;
+	bottom: 33%;
+	right: 14%;
+	
+}
+
+/* Clock styles */
+.circle {
+	fill: none;
+	
+}
+
+.mid-circle {
+	fill: #000;
+}
+.hour-marks {
+	fill: none;
+	stroke: #000;
+	stroke-width: 9;
+	stroke-miterlimit: 10;
+}
+
+.hour-arm {
+	fill: none;
+	stroke: #000;
+	stroke-width: 17;
+	stroke-miterlimit: 10;
+}
+
+.minute-arm {
+	fill: none;
+	stroke: #000;
+	stroke-width: 11;
+	stroke-miterlimit: 10;
+}
+
+.second-arm {
+	fill: none;
+	stroke: #000;
+	stroke-width: 4;
+	stroke-miterlimit: 10;
+}
+
+/* Transparent box ensuring arms center properly. */
+.sizing-box {
+	fill: none;
+}
+
+/* Make all arms rotate around the same center point. */
+/* Optional: Use transition for animation. */
+#hour,
+#minute,
+#second {
+	transform-origin: 300px 300px;
+	/* transition: transform .5s ease-in-out; */
+}
